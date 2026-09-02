@@ -17,16 +17,26 @@ My 24-week learning project for Camera Application Engineer.
 
 ## Progress
 
-- [ ] Week 01 - Camera Pipeline / RAW / Bayer
-- [ ] Week 02 - RGB / YUV / Color Space
-- [ ] Week 03 - OpenCV Image Processing
-- [ ] Week 04 - Image Quality
-- [ ] Week 05 - BLC / DPC
-- [ ] Week 06 - LSC / Demosaic
-- [ ] Week 07 - AWB
-- [ ] Week 08 - Gamma / CCM
-- [ ] Week 09 - Noise Reduction
-- [ ] Week 10 - ISP Pipeline
-- [ ] Week 11 - Low Light
-- [ ] Week 12 - Image Quality Test
-...
+| Week | Topic | Status |
+| --- | --- | --- |
+| 01 | Camera Pipeline / RAW / Bayer / ISP | ✅ Completed |
+| 02 | RGB / YUV / Color Space | ⬜ |
+| 03 | OpenCV Image Processing | ⬜ |
+| 04 | Image Quality | ⬜ |
+| 05 | BLC / DPC | ⬜ |
+| 06 | LSC / Demosaic | ⬜ |
+| 07 | AWB | ⬜ |
+| 08 | Gamma / CCM | ⬜ |
+| 09 | Noise Reduction | ⬜ |
+| 10 | ISP Pipeline | ⬜ |
+| 11 | Low Light | ⬜ |
+| 12 | Image Quality Test | ⬜ |
+
+Week 13–24：待补充
+
+### Week 01 完成标准
+
+- [x] 理解 Camera Pipeline 基本流程
+- [x] 理解 RAW / Bayer RAW
+- [x] 理解 ISP 的作用
+- [x] 理解 RAW → ISP → RGB 的基本过程
