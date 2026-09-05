@@ -126,8 +126,18 @@ MIPI CSI-2 不是"把字节一个接一个发过去"这么简单，它是**按�
 
 - **DI（Data Identifier）**：1 字节 = VC(2 bit) + DT(6 bit)，告诉接收端"这一包是什么"
 - **WC（Word Count）**：payload 字节数（16 bit）
-- **ECC**：保护包头，能纠 1 bit 错、检 2 bit 错（线缆/电磁干扰下包头出错会毁掉整个包的解析）
-- **CRC**：16 bit，保护 payload
+
+**ECC 与 CRC 的分工**：
+
+```text
+ECC ──→ Header   错误检测 + 纠正（纠 1 bit 错 / 检 2 bit 错）
+CRC ──→ Payload  错误检测（16 bit 校验，只检不纠）
+```
+
+| | 保护对象 | 能力 | 设计原因 |
+| --- | --- | --- | --- |
+| ECC | 包头 4 字节（DI + WC + ECC） | 检 2 bit / 纠 1 bit | 包头错了（尤其 WC）整个包的边界都无法解析，代价大 → 给纠错能力 |
+| CRC | Payload（最长 65535 字节） | 检错 | Payload 出错只是坏掉少数像素，代价小 → 检测到后丢弃该包即可，省带宽 |
 
 而长包的 payload 里放的，就是 **Day 2 实验实现的 packed RAW10**：
 
