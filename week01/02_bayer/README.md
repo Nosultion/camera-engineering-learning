@@ -267,7 +267,7 @@ CSI Camera ──┬── libargus + nvarguscamerasrc（走 Jetson ISP）
 - Bayer RAW Sensor 输出的本质：**每个像素 1 个采样值的单通道数据**（RAW10 = 0~1023）
 - RAW10 在 MIPI 上以 **4 像素 → 5 字节** 的 packed 形式传输
 - Bayer 只是"半成品"，必须经过 Demosaic（ISP 的一部分）才能恢复 RGB —— 恢复是有损的（PSNR 28~38 dB）
-- 下一步：MIPI CSI-2 + RAW 数据如何从 Sensor 进入 SoC（Lane / Virtual Channel / Frame Start / Line Start）
+- 下一步：MIPI CSI-2 + RAW 数据如何从 Sensor 进入 SoC（Lane / Virtual Channel / Frame Start / Line Start）→ **已完成，见 [`03_mipi_csi2/`](../03_mipi_csi2/)**
 
 ## 运行方式
 

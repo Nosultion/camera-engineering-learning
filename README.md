@@ -19,7 +19,7 @@ My 24-week learning project for Camera Application Engineer.
 
 | Week | Topic | Status |
 | --- | --- | --- |
-| 01 | Camera Pipeline / RAW / Bayer / ISP | 🔄 进行中（理论 + Bayer/RAW10 实验完成，MIPI CSI-2 待学） |
+| 01 | Camera Pipeline / RAW / Bayer / ISP | ✅ Completed |
 | 02 | RGB / YUV / Color Space | ⬜ |
 | 03 | OpenCV Image Processing | ⬜ |
 | 04 | Image Quality | ⬜ |
@@ -57,7 +57,7 @@ weekNN/<topic>/
 - [x] 实现 Bayer → RGB
 - [x] 理解 RAW8 / RAW10 / RAW12
 - [x] 实现 RAW10 Packing / Unpacking
-- [ ] 理解 MIPI CSI-2 在 Camera Pipeline 中的位置
+- [x] 理解 MIPI CSI-2 在 Camera Pipeline 中的位置
 - [x] 理解 ISP 的输入和输出
 
 ## 仓库结构
@@ -67,14 +67,18 @@ camera-engineering-learning/
 ├── docs/                        # 理论学习笔记
 │   └── 01_camera_pipeline.md
 ├── week01/
-│   ├── camera_pipeline/         # Week 01 第一部分：Pipeline 截图素材
-│   └── 01_bayer/                # Week 01 第二部分：Bayer / RAW10 实验
-│       ├── generate_bayer.py    #   实验 1: RGB → Bayer RGGB
-│       ├── generate_raw10.py    #   实验 2: 8-bit → RAW10 模拟
-│       ├── raw10_packing.py     #   实验 3: RAW10 Packing / Unpacking
-│       ├── demosaic.py          #   实验 4: Bayer → Demosaic → RGB
-│       ├── input/               #   实验输入
-│       ├── output/              #   实验结果（含对比图与字节流）
+│   ├── 01_camera_pipeline/      # Week 01 第一部分：Pipeline 截图素材
+│   ├── 02_bayer/                # Week 01 第二部分：Bayer / RAW10 实验
+│   │   ├── generate_bayer.py    #   实验 1: RGB → Bayer RGGB
+│   │   ├── generate_raw10.py    #   实验 2: 8-bit → RAW10 模拟
+│   │   ├── raw10_packing.py     #   实验 3: RAW10 Packing / Unpacking
+│   │   ├── demosaic.py          #   实验 4: Bayer → Demosaic → RGB
+│   │   ├── input/               #   实验输入
+│   │   ├── output/              #   实验结果（含对比图与字节流）
+│   │   └── README.md
+│   └── 03_mipi_csi2/            # Week 01 第三部分：MIPI CSI-2 / Lane / V4L2
+│       ├── calculate_bandwidth.py  # 实验: Camera 带宽计算器
+│       ├── output/
 │       └── README.md
 ├── requirements.txt
 └── README.md
